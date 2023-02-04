@@ -38,7 +38,31 @@ function clickButton() {
             } else if(buttons[i].classList.contains('percent')) {
                 inputPercent(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('sign')) {
+            }
+
+        //New function for homework 2
+            else if(buttons[i].classList.contains('sqrt')){
+                inputSqrt(displayValue);
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('cos')){
+                inputCos(displayValue);
+                updateDisplay();
+            }
+            
+            else if(buttons[i].classList.contains('sin')){
+                inputSin(displayValue);
+                updateDisplay();
+            }
+            
+            else if(buttons[i].classList.contains('tan')){
+                inputTan(displayValue);
+                updateDisplay();
+            }
+
+            
+            
+             else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
             } else if(buttons[i].classList.contains('clear'))
@@ -143,6 +167,28 @@ function inputPercent(num) {
     displayValue = (num/100).toString();
 }
 
+
+//Function for homework 2
+
+function inputSqrt(num){
+    displayValue = ((num**0.5)).toString();
+}
+
+
+//In radians
+function inputCos(num){
+    displayValue = (Math.cos(num)).toString();
+}
+//In radians
+function inputSin(num){
+    displayValue = (Math.sin(num)).toString();
+}
+//In radians
+function inputTan(num){
+    displayValue = (Math.tan(num)).toString();
+}
+//done 
+
 function inputSign(num) {
     displayValue = (num * -1).toString();
 }
@@ -178,7 +224,7 @@ function operate(x, y, op) {
         }
     }
 }
-
+//Round up for output result
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
