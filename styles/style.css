@@ -20,7 +20,7 @@ html {
     border-radius: 4px;
     display: grid;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(6, 60px);
     gap: 2px;
 }
 
@@ -108,6 +108,42 @@ button {
 .percent:active {
     background-color: rgb(123, 189, 255);
 }
+
 #homework{
     text-align: left;
 }
+
+
+/*new Background color for the 4 new buttons for homework 2*/
+.cos {
+   background-color: rgb(111, 222, 105);
+}
+
+.sin {
+    background-color: rgb(111, 222, 105);
+}
+
+.tan {
+    background-color: rgb(111, 222, 105);
+}
+
+.sqrt {
+    background-color: rgb(111, 222, 105);
+}
+
+.sin:active {
+    background-color: red;
+}
+
+.cos:active {
+    background-color: red;
+}
+
+.tan:active {
+    background-color: red;
+}
+
+.sqrt:active {
+    background-color: red;
+}
+/*done*/
