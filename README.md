@@ -7,8 +7,7 @@
 
 ##### This image is a screenshot from homework 1
 
-![Calculator](https://github.com/cop4808-spring-2023-fullstack-web
-/cop4808-git-and-github-fundamentals-SizomanHuxley/HW1Screenshot.png "Calculator from homewirk 1")
+![Calculator](https://github.com/cop4808-spring-2023-fullstack-web/cop4808-git-and-github-fundamentals-SizomanHuxley/HW1Screenshot.png "Calculator from homework 1")
 
 
 ##### For homework 2, we had to: 
