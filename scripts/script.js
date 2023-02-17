@@ -7,10 +7,19 @@ let result = null;
 const buttons = document.querySelectorAll('button');
 
 window.addEventListener('keydown', function(e){
-    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
-    key.click();
+    const key = document.querySelector(`button[data-key='${e.key}']`);
+    
+    try
+    {
+        key.click();
+    }
+    catch (error)
+    {
+        console.log("Catch error: ", error);
+        this.document.getElementById("errorcheck").innerHTML = "That key is not allowed.";
+        
+    }
 });
-
 function updateDisplay() {
     const display = document.getElementById('display');
     display.innerText = displayValue;
@@ -87,12 +96,23 @@ function inputOperand(operand) {
         }
     } else {
         //3rd/5th click - inputs to secondOperand
-        if(displayValue === firstOperand) {
+         if (checkSecOperand() == true)
+            displayValue += operand;
+        else if (displayValue === firstOperand) {
+            secondOperand = displayValue;
             displayValue = operand;
-        } else {
+        }             
+        else {
             displayValue += operand;
         }
     }
+}
+
+function checkSecOperand() {
+    if (secondOperand !== null)
+        return true;
+    else
+        return false;
 }
 
 function inputOperator(operator) {
@@ -144,7 +164,7 @@ function inputEquals() {
         if(result === 'lmao') {
             displayValue = 'lmao';
         } else {
-            displayValue = roundAccurately(result, 15).toString();
+            displayValue = roundAccurately(result, 10).toString();
             firstOperand = displayValue;
             secondOperand = null;
             firstOperator = null;
